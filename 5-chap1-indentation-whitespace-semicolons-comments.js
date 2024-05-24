@@ -17,3 +17,14 @@ if (status === "new") {
 } else {
     console.log("Welcome back, I knew you'd like it!");
 }
+
+/* SEMICOLONS: After every statement, you should insert a semicolon. JavaScript is very forgiving
+and will understand many situations in which you have forgotten one, but develop
+the habit of adding one after every line of code early. When you declare a code block,
+such as an if statement or loop, you should not end with a semicolon. It is only for
+the separate statements. */
+
+//This is a single-line comment.
+
+/* This is a multiline 
+comment*/
