@@ -16,7 +16,7 @@ let language= 'JavaScript';
 
 //Lets now use backticks to declare a string
 let message = `Let's learn ${language}`
-
+ 
 console.log(message); //This will print Let's learn JavaScript
 
 
