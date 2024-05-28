@@ -13,3 +13,4 @@ console.log(octNr); //This will print 8
 console.log(hexNr); //This will print 1000
 console.log(binNr); //This will print 4
 
+//Takeway is that all numbers are number data type in JS.
