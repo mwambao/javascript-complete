@@ -1,0 +1,36 @@
+<!--
+Write some code to calculate the hypotenuse of a triangle using the Pythagorean theorem when given the values of the other two sides. The theorem specifies that the relation between the sides of a right-angled triangle is a2 + b2 = c2.
+
+The Pythagorean theorem only applies to right-angled triangles. The sides connected to the 90-degree angle are called the adjacent
+and opposite sides, represented by a and b in the formula. The longest side, not connected to the 90-degree angle, is called the
+hypotenuse, represented by c.
+
+Write some code to calculate the hypotenuse of a triangle using the Pythagorean theorem when given the values of the other two sides. The theorem specifies that the relation between the sides of a right-angled triangle is a2 + b2 = c2.
+You can use prompt() to get the value for a and b. Write code to get the value from the user for a and b. Then square the values of both a and b before adding them together and finding the square root. Print your answer to the console.
+ */
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right angle triangle</title>
+</head>
+<body>
+    <script>
+       let a = prompt('Enter the value of side a: ') 
+       let b = prompt('Enter the value of side b: ')
+
+       c = Math.sqrt((a**2) + (b**2));
+       
+       alert(c) //This will print the result on the screen.
+
+       
+    </script>
+    
+</body>
+</html>
+
