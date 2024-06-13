@@ -10,4 +10,10 @@ nr2--; // nr2 = nr2 - 1 i.e. DECREMENT
 console.log(nr2); //9
 
 
+/* 
+++nr --> prefix unary operator
+nr++ --> postfix unary operator
+ */
+
+
 
