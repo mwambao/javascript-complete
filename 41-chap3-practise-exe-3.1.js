@@ -9,7 +9,7 @@
 shoppingList = ['Milk', 'Bread', 'Apples'];
 console.log(shoppingList) //[ 'Milk', 'Bread', 'Apples' ]
 
-console.log('The list length is: ' + shoppingList.length);
+console.log('The list length is: ' + shoppingList.length); //3
 
 shoppingList[1] = 'Bananas'; // update Bread to Bananas
 console.log(shoppingList) // [ 'Milk', 'Bananas', 'Apples' ]
