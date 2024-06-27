@@ -1,5 +1,5 @@
 /* 
-To delete:
+To delete use below methods:
 pop()
 shift()
 splice() <--- We already looked at this
