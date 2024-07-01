@@ -40,3 +40,21 @@ console.log(myCar);
   color: 'Black'
 }
 */
+
+newVariable = 'forSale';
+myCar[newVariable] = false;
+console.log(myCar[newVariable]); //false
+console.log(myCar);
+/*
+{
+  make: 'Toyota',
+  model: 'Prius',
+  Value: 15000,
+  childLock: true,
+  color: 'Black',
+  forSale: false
+}
+*/
+console.log('Make: '+ myCar.make +' ,Model: ' + myCar.model); //Make: Toyota ,Model: Prius
+console.log('For Sale: '+ myCar.forSale); // For Sale: false
+
