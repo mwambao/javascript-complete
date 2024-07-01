@@ -3,13 +3,7 @@ let arr = [0,1,2];
 console.log(typeof arr); //object
 
 //*objectname* has a(n) *property name
-let dog = {
-    dogName: 'JavaScript',
-    weight: 2.4,
-    color: 'brown',
-    breed: 'Chihuahua',
-    burglerBiter: true,
-};
+
 
 
 console.log(typeof dog); //object
