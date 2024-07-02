@@ -37,9 +37,8 @@ variableZ = {
     idValue: '7890'
 }
 
-people.friends[0] = variableX;
-people.friends[1] = variableY;
-people.friends[2] = variableZ;
+//adding the three to the array
+people.friends.push(variableX, variableY, variableZ)
 
 console.log(people);
 
