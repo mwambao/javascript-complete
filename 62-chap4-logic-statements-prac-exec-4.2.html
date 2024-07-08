@@ -11,35 +11,34 @@ confirm entry to the venue but deny the purchase of alcohol
 6. Provide a default else statement to set the message variable to deny entry if
 none are true
 7. Output the response message variable to the console
-
 -->
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice Exec 4.2</title>
- </head>
- <body>
-    <script type="text/javascript">
-       let message =  prompt("Enter your age");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+</head>
+<body>
+       <script type="text/javascript">
+              let message =  prompt("Enter your age");
 
-       if (message >= 21) {
-        message = "Confirm entry to a venue and the ability to purchase alcohol";
-        console.log(message);
+              if (message >= 21) {
+               message = "Confirm entry to a venue and the ability to purchase alcohol";
+               console.log(message);
+       
+              } else if (message >= 19 ) {
+               message = "Confirm entry to a venue but deny the purchase of alcohol";
+               console.log(message);
+               
+              } else {
+               message = "Deny entry";
+               console.log(message);
+              }
+       </script>
+</body>
+</html>
 
-       } else if (message >= 19 ) {
-        message = "Confirm entry to a venue but deny the purchase of alcohol";
-        console.log(message);
-        
-       } else {
-        message = "Deny entry";
-        console.log(message);
-       }
 
 
-
-    </script>
- </body>
- </html>
