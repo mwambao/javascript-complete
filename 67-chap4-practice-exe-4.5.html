@@ -1,0 +1,64 @@
+<!--
+Practice exercise 4.5
+1. Create a variable called prize and use a prompt to ask the user to set the
+value by selecting a number between 0 and 10
+2. Convert the prompt response to a number data type
+3. Create a variable to use for the output message containing the value "My
+Selection: "
+4. Using the switch statement (and creativity), provide a response back
+regarding a prize that is awarded depending on what number is selected
+5. Use the switch break to add combined results for prizes
+6. Output the message back to the user by concatenating your prize variable
+strings and the output message string
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise exercise 4.5</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let prize = prompt("Select a number between 0 and 10");
+        prize = Number(prize);
+
+        mySelection = prize;
+
+        switch (mySelection) {
+            case 0: 
+              console.log("You selected " + mySelection + " , you have 0 prize");
+              break;
+            case 1: 
+            case 2:
+               console.log("You selected " + mySelection + " , you have prize 1 & 2");
+               break;
+            case 3: 
+            case 4: 
+              console.log("You selected " + mySelection + " , you have prize 3 & 4");
+              break;
+            case 5:
+               console.log("You selected " + mySelection + " , you have prize 5");
+               break;
+            case 6: 
+              console.log("You selected " + mySelection + " , you have prize 6");
+              break;
+            case 7:
+               console.log("You selected " + mySelection + " , you have prize 7");
+               break;
+            case 8: 
+              console.log("You selected " + mySelection + " , you have prize 8");
+              break;
+            case 9: 
+              console.log("You selected " + mySelection + " , you have prize 9");
+              break;
+            case 10:
+               console.log("You selected " + mySelection + " , you have prize 10");
+               break;
+            default:
+                console.log("please select a number between 0 and 10")
+        }
+    </script>
+</body>
+</html>
