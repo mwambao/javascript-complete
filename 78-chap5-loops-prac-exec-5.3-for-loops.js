@@ -20,21 +20,30 @@ name: 'Lesson 1', status: true
 let myWork = [];
 
 for (let i = 1; i <=10; i++ ){
-    let status = true;
-    status = true ? myWork.push('Lesson '+ i + ' Status: '+ true) : myWork.push('Lesson '+ i + ' Status: '+ false)
-    myWork.push('Lesson '+ i + ' Status: '+ status);
+    if (i % 2 == 0) {
+        let status = true;
+        myWork.push('Lesson '+ i + ' Status: '+ status)
+    } else {
+       let  status = false;
+       myWork.push('Lesson '+ i + ' Status: '+ status)
+    }
+
+    ;
 }
 
-
-age < 18 ? console.log("Denied Access") : console.log ("Allowed Access"); //Allowed Access
-console.log(myWork); 
+console.log(myWork);
 
 /*
 [
-    'Lesson 1', 'Lesson 2',
-    'Lesson 3', 'Lesson 4',
-    'Lesson 5', 'Lesson 6',
-    'Lesson 7', 'Lesson 8',
-    'Lesson 9', 'Lesson 10'
-  ]
+  'Lesson 1 Status: false',
+  'Lesson 2 Status: true',
+  'Lesson 3 Status: false',
+  'Lesson 4 Status: true',
+  'Lesson 5 Status: false',
+  'Lesson 6 Status: true',
+  'Lesson 7 Status: false',
+  'Lesson 8 Status: true',
+  'Lesson 9 Status: false',
+  'Lesson 10 Status: true'
+]
 */
