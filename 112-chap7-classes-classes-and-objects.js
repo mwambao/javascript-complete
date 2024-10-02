@@ -1,5 +1,4 @@
 
-
 //classes are just some special function beneath the surface.
 //if we have a person object, this object could have properties called age and lastName that contain values. Here is an example of an object:
 /*
