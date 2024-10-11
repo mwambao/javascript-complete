@@ -35,7 +35,19 @@ let uri = "https://www.example.com/submit?name=duncan owino mwamba";
 
 let encoded_uri = encodeURI(uri);
 console.log("Encoded :", encoded_uri); // Encoded : https://www.example.com/submit?name=duncan%20owino%20mwamba
+//spaces have been replaced in the encoded version with %20.
+
 
 let decoded_uri = decodeURI(encoded_uri);
 console.log("Decoded: ", decoded_uri); // Decoded:  https://www.example.com/submit?name=duncan owino mwamba
+//spaced have been re-instated in the decoded version.
 
+
+/*
+this encode and decode do not take special characters into account, and therefore leave them in the
+URI. Colons, question marks, equal signs, slashes, and ampersands can be expected.
+This is great for fixing broken URIs, but it's actually a bit useless whenever you need
+to encode strings that contain any of these characters: / , ? : @ & = + $ #. These can
+be used in URIs as part of the URI and are therefore skipped. This is where the next
+two built-in methods come in handy (decodeUriComponent() and encodeUriComponent().
+*/
