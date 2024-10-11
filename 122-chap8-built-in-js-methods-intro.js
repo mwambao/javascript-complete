@@ -1,4 +1,11 @@
-
+/*
+We have seen many built-in JavaScript methods already. Any method that we didn't
+define ourselves is a built-in method. Some examples include console.log(), Math.
+random(), prompt(), and many more—think about methods on arrays for example.
+The difference between a method and a function is that a function is defined
+anywhere in the script, and a method is defined inside a class. So methods are pretty
+much functions on classes and instances.
+*/
 
 let s = "Hello"; //we store a value in variable s
 
