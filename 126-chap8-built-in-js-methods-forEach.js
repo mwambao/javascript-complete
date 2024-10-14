@@ -1,5 +1,6 @@
 /*
-The forEach() method in JavaScript is used to execute a provided function once for each array element. 
+- The forEach() method in JavaScript is used to execute a provided function once for each array element. 
+- It takes function to be executed as an argument.
 */
 
 
