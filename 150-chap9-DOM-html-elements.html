@@ -1,0 +1,59 @@
+<!--
+Tag to open     Tag to end          Description
+<p>             </p>                Used to create a paragraph.
+<h1>            </h1>               Used to create a header; smaller headers are h2 to h6.
+<span>          </span>             Generic inline container for content that needs to be separated,for example, for layout purposes.
+<a>             </a>                Used for hyperlinks.
+<button>        </button>           Used for buttons.
+<table>         </table>            Creates a table.
+<tr>            </tr>               Creates a table row, must be used inside a table.
+<td>            </td>               Creates a table data cell inside a row.
+<ul>            </ul>               Unordered lists, with bullet points, for example.
+<ol>            </ol>               Ordered lists with numbers.
+<li>            </li>               List items for inside ordered and unordered lists.
+<div>           </div>              Section inside the HTML page. It is often used as a container for other styles or sections and can easily be used for special layouts.
+<form>          <form>              Creates an HTML form.
+<input>         </input>            Creates an input field in which the user can enter information. These can be textboxes, checkboxes, buttons, passwords, numbers, dropdowns, radio buttons, and much more.
+<input />       None                Same as input, but written without a closing tag, the / at the end makes it self-closing. This is only possible for a few elements.
+<br>            None                Used to make a line break (go to a new line). It does not need an end tag and is therefore an exception.
+
+
+EXAMPLE BELOW:
+It creates a web page, with Awesome in the tab title. And on the page, it has a big
+header saying Language and awesomeness. Then there is a table with three rows and
+two columns. The first row contains the headers Language and Awesomeness. The
+second row holds the values JavaScript and 100, and the third row holds the values
+HTML and 100.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome</title>
+</head>
+<body>
+    <h1>Language and awesomeness
+    </h1>
+
+    <table>
+        <tr>
+            <th>Language</th>
+            <th>Awesomeoness</th>
+        </tr>
+
+        <tr>
+            <td>Javascript</td>
+            <td>100</td>
+        </tr>
+
+        <tr>
+            <td>HTML</td>
+            <td>100</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
