@@ -1,8 +1,12 @@
 <!--
 * The Document Object Model (DOM) is a lot more exciting than it may sound
 at first. This is a fundamental concept you will need to understand before working with JavaScript on web pages. It grabs an HTML page and turns it into a logical tree.
+* DOM object {} that represents the page you see in the browser and provides you with an API to interact with.
+* Web browser constructs the DOM when it load the HTML document, and structures all the elements in a tree like representation.
+* JS can access the DOM to dynamically change the content, struncture and style of a web page.
+* console.log(document); or console.dir(document);
 
-* The Browser Object Model (BOM) holds all the methods and properties for JavaScript to interact with the browser. This is information related to previous pages visited, the size of the window of the browser, and also the DOM. sometimes called windows browser object.
+* The Browser Object Model (BOM) holds all the methods and properties for JavaScript to interact with the browser. This is information related to previous pages visited, the size of the window of the browser, and also the DOM. Sometimes called windows browser object.
 
 => To see BOM right-click on page -> inspect -> console -> console.dir(window); click on triangle to inspect the information about windows object
 e.g. document properties under the listing
@@ -27,5 +31,11 @@ able to create interactive web pages!
 </head>
 <body>
     <p>Hello web!</p>
+
+    <script type="text/JavaScript">
+        //TIP! console.dir(document) THEN you CAN ALWAYS rightclick and copy the path to the property
+        document.title = "My website"; // this will change the page to this title when page loads
+        document.body.style.backgroundColor = "hsl(0, 0% 15%)";
+    </script>
 </body>
 </html>
