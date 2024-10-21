@@ -1,0 +1,56 @@
+<!--
+Select a page element and update the content, change the style, and add attributes.
+Create an HTML file containing a page element with a class of output using the
+following code template:
+<!DOCTYPE html >
+<html>
+<div class="output"></div>
+<script>
+</script>
+</html>
+
+Within the script tags, make the following changes to the output element:
+1. Select the page element as a JavaScript object.
+2. Update the textContent property of the selected page element.
+3. Using the classList.add object method, add a class of red to the element.
+4. Update the id property of the element to tester.
+5. Through the style object, add a backgroundColor property of red to the page
+element.
+6. Get the document URL via document.URL and update the text of the output
+element to contain the value of the document URL. You can log it in the
+console first to ensure you have the correct value.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practise exercise - selecting page</title>
+</head>
+<body>
+    <div class="output">Duncan Owino</div>
+
+    <script>
+// Selects the first element with the class 'output' and assigns it to the variable 'myName'
+const myName = document.querySelector(".output");
+
+// Sets the text content of the selected element to "Felix Ogando"
+myName.textContent = "Felix Ogando";
+
+// Adds the class 'red' to the element, which can be used for styling (if a corresponding class exists in the CSS)
+myName.classList.add("red");
+
+// Assigns the id 'tester' to the element, making it unique for identification and styling
+myName.id = "tester";
+
+// Changes the background color of the element to red using inline CSS
+myName.style.backgroundColor = "red";
+
+console.log(document.URL); // http://127.0.0.1:3000/154-chap9-DOM-selecting-page-elements-exercise.html
+// Sets the text content of the selected element to the current page's URL
+myName.textContent = document.URL;
+
+
+    </script>
+</body>
+</html>
