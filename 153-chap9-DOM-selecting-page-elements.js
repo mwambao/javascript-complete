@@ -26,4 +26,4 @@ const ele2 = document.querySelectorAll(".output");
 
 // Logs the NodeList containing all elements with the class 'output' to the console
 console.log(ele2); 
-//  [h1.output, div.output]
+//NodeList(2) [h1.output, div.output]
