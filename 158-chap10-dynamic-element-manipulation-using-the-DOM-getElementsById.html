@@ -1,0 +1,21 @@
+<!--
+We can grab elements by ID with the getElementById() method. This returns one
+element with the specified ID. IDs should be unique, as only one result will be
+returned from the HTML document.
+-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Just an example</h1>
+        <div id="one" class="example">Hi!</div>
+        <div id="two" class="example">Hi!</div>
+        <div id="three" class="something">Hi!</div>
+    </body>
+    <script>
+        console.log(document.getElementById("one"));
+        /* The above will give:
+        <div id="one" class="example">Hi!</div>
+        */
+    </script>
+</html>
