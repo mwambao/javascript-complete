@@ -1,0 +1,31 @@
+<!--
+If we ask for elements by tag name, we get an array as a result. This is because there
+could be more than one element with the same tag name. It will be a collection of
+HTML elements, or HTMLCollection, which is a special JavaScript object. It's basically
+just a list of nodes.
+-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Just an example</h1>
+        <div id="one" class="example">Hi!</div>
+        <div id="two" class="example">Hi!</div>
+        <div id="three" class="something">Hi!</div>
+    </body>
+    <script>
+        console.log(document.getElementsByTagName("div"));
+        /* The will output:
+        HTMLCollection(3) [div#one.example, div#two.example, div#three.something, one: div#one.example, two: div#two.example, three: div#three.something]*/
+        
+        //we can then access the item()
+        console.log(document.getElementsByTagName("div").item(1));
+        //div#two.example
+
+        //we can also access them by name using namedItem()
+        console.log(document.getElementsByTagName("div").namedItem("one"));
+        //div#two.example
+
+
+    </script>
+</html>
