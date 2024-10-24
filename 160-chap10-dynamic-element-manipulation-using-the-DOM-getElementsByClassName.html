@@ -1,0 +1,16 @@
+<!--
+getElementsByClassName => We can do something very similar for class names.
+-->
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Just an example</h1>
+        <div id="one" class="example">Hi!</div>
+        <div id="two" class="example">Hi!</div>
+        <div id="three" class="something">Hi!</div>
+    </body>
+    <script>
+        console.log(document.getElementsByClassName("something"));
+        //HTMLCollection [div#three.something, three: div#three.something]
+    </script>
+</html>
