@@ -1,0 +1,25 @@
+
+<!--
+querySelector() and querySelectorAll()
+These methods select elements using CSS selectors. 
+querySelector() ==> returns the first matching element, while 
+querySelectorAll() ==> returns all matching elements.
+
+-->
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Just an example</h1>
+        <div id="one" class="example">Hi!</div>
+        <div id="two" class="example">Hi!</div>
+        <div id="three" class="something">Hi!</div>
+    </body>
+    <script>
+        console.log(document.querySelector("div"));
+        //<div id="one" class="example">Hi!</div>
+
+        console.log(document.querySelectorAll("div"));  
+        //NodeList(3) [div#one.example, div#two.example, div#three.something]     
+        //with item() method we can get them by index, just like we did for HTMLCollection
+    </script>
+</html>
