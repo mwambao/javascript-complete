@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating element style</title>
+</head>
+<body>
+    <!-- Div elements with IDs corresponding to rainbow colors -->
+    <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+    <!-- Button that triggers the rainbowify function to change div colors when clicked -->
+    <button onclick="rainbowify()">Make me a rainbow</button>
+
+    
+    <style>
+    /* Style for all divs, setting uniform height, width, and default white background color */
+        div {
+            height: 30px;
+            width: 30px;
+            background-color: white;
+        }
+    </style>
+</body>
+<script>
+    // Function to apply a rainbow color scheme to div elements
+    function rainbowify(){
+        // Get all div elements on the page
+        let divs = document.getElementsByTagName("div");
+        // Loop through each div element
+        for (let i=0; i < divs.length; i++){
+            // Set each div's background color to match its ID
+            divs[i].style.backgroundColor = divs[i].id;
+        }
+    }
+</script>
+
+</html>
