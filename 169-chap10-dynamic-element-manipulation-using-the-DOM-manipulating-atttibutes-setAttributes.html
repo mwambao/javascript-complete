@@ -1,0 +1,34 @@
+<!--we can manipulate elements attributes using setAttributes() method-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Manipulating attributes</title>
+</head>
+<body>
+    <div id="shape" class="square"></div>
+    <button onclick="changeAttr()">Change attributes...</button>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+</body>
+
+<script>
+    /*when this function is called(button clicked), the below attributes will be set as below:
+    <div id="new" class="circle" style="background-color:red;border:1px solid black"></div>
+    */
+    function changeAttr(){
+        let el = document.getElementById("shape");
+        el.setAttribute("style", "background-color:red;border:1px solid black");
+        el.setAttribute("id", "new");
+        el.setAttribute("class", "circle");
+    }
+</script>
+</html>
