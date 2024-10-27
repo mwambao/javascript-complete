@@ -1,0 +1,41 @@
+
+<!-- we will use classList.add() method to add a class to an element. This applies the CSS styling of that class-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add classes to an element</title>
+</head>
+<body>
+    <!-- Div element with both 'square' and 'blue' classes, initially showing as a blue square -->
+    <div id="shape" class="square blue"></div>
+    
+    <!-- Button that calls the 'disappear' function to hide the div when clicked -->
+    <button onclick="disappear()">Disappear!</button>
+
+    <style>
+        /* Class that hides an element by setting its display to 'none' */
+        .hide {
+            display: none;
+        }
+
+        /* Class that creates a yellow square with 100px height and width */
+        .square {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        /* Compound selector for elements with both 'square' and 'blue' classes, 
+           setting the background color to blue (overrides the yellow background) */
+        .square.blue {
+            background-color: blue;
+        }
+    </style>
+</body>
+<script>
+    // Function to hide the element with ID 'shape' by adding the 'hide' class
+    function disappear(){
+        document.getElementById("shape").classList.add("hide");
+    }
+</script>
+</html>
