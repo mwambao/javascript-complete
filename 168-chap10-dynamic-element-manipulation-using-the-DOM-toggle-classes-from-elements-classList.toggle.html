@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Toggle classes in elements</title>
+</head>
+<body>
+    <div id="shape" class="square"></div>
+    <button onclick="changeVisibility()">Magic!</button>
+
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .square {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+    </style>
+</body>
+
+<script>
+    /*
+    Pressing magic button will add the clss to the classList when it isn't there and remove it when it is there. 
+    This means that you can see the result very time you press the button. The square keeps appearing and disappearing.
+    */
+    function changeVisibility(){
+        document.getElementById("shape").classList.toggle("hide");
+    }
+</script>
+</html>

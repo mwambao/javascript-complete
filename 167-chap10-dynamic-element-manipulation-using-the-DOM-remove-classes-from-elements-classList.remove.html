@@ -1,0 +1,38 @@
+
+<!--
+classList.remove() <== This method removes a class thereby the style that is applied by that class will exist to exist
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Remove class elements</title>
+</head>
+<body>
+    <!-- Div element with 'square' and 'blue' classes, initially showing as a blue square -->
+    <div id="shape" class="square blue"></div>
+    
+    <!-- Button that calls the 'change' function to remove the 'blue' class when clicked -->
+    <button onclick="change()">Change!</button>
+
+    <style>
+        /* Style for the 'square' class, setting height, width, and yellow background */
+        .square {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        /* Style for elements with both 'square' and 'blue' classes,
+           setting the background color to blue (overrides yellow) */
+        .square.blue {
+            background-color: blue;
+        }
+    </style>
+</body>
+<script>
+    // Function to remove the 'blue' class from the element with ID 'shape'
+    function change(){
+        document.getElementById("shape").classList.remove("blue");
+    }
+</script>
+</html>
