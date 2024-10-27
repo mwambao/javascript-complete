@@ -4,11 +4,19 @@
     <title>Manipulating element style</title>
 </head>
 <body>
-    <button id="magic" onclick="toggleDisplay()">I might disappear and appear</button>
+    <!-- Paragraph element that will disappear and appear when the button is clicked -->
+    <p id="magic">I might disappear and appear.</p>
+     <!-- Button element that triggers the toggleDisplay function when clicked -->
+    <button onclick="toggleDisplay()">Magic!</button>
 </body>
 <script>
+    // Function to toggle the display style of the paragraph element
     function toggleDisplay(){
+        // Get the paragraph element by its ID
         let p = document.getElementById("magic");
+
+        // Check the current display style; if "none", set to "block" (visible),
+        // else set to "none" (hidden)
         if (p.style.display === "none") {
             p.style.display = "block";
         } else {
