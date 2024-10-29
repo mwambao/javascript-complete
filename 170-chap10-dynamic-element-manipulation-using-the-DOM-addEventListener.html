@@ -1,0 +1,40 @@
+
+<!--
+You can add event listeners to elements to handle user interactions.
+we have user some events like onclick for buttons, others are like onmouseoer, onchange etc
+
+There is a way to register event handlers using JavaScript as well. We call these event
+listeners. Using event listeners, we can add multiple events to one element. This way,
+JavaScript is constantly checking, or listening, for certain events to the elements on
+the page. Adding event listeners is a two-step process:
+1. Select the element you want to add an event to
+2. Use the addEventListener("event", function) syntax to add the event
+Even though it is two steps, it can be done in one line of code:
+
+document.getElementById("square").addEventListener("click",
+changeColor);
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events listeners on elements</title>
+</head>
+<body>
+    <!-- Button element that users can click -->
+    <button id="myButton">Click me!</button>
+</body>
+<script>
+    // Selects the button element by its ID and stores it in the 'button' variable
+    let button = document.getElementById("myButton");
+    
+    // Adds an event listener to the button for "click" events,
+    // calling the 'buttonClicked' function when the button is clicked
+    button.addEventListener("click", buttonClicked);
+    
+    // Function that runs when the button is clicked, displaying an alert message
+    function buttonClicked(){
+        alert("Button clicked!");
+    }
+</script>
+</html>
