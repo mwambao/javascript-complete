@@ -1,0 +1,62 @@
+<!--
+Personalize your web pages. Allow users to change the theme of the page display
+between regular mode and dark mode.
+1. Within a simple HTML document, set up a Boolean value variable to use that
+will toggle the color modes.
+2. Use window.onclick to set up a function that outputs a message in the
+console when clicked. You can use the value of the Boolean variable.
+3. Within the function, add a condition that checks whether the darkMode
+variable is true or false.
+4. If false, then update the page style to a background color of black and a font
+color of white.
+5. Add an else response that changes the color of the background to white and
+the color of the text to black. Also, update the value of the darkMode variable
+accordingly.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EXERCISE</title>
+</head>
+<body>
+    <!-- Define CSS classes for dark mode and light (white) mode -->
+    <style>
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .white-mode {
+            background-color: white;
+            color: black;
+        }
+    </style>
+
+    <!-- Sample paragraph to test the theme switching -->
+    <p>My sample paragraph text</p>
+</body>
+
+<script>
+    // Variable to keep track of the current mode; false means white mode, true means dark mode
+    let darkMode = false;
+
+    // Add an event listener to the window to trigger theme toggle on click
+    window.onclick = function() {
+        console.log(darkMode);  // Log the current mode to the console for debugging
+
+        // Check the current mode and toggle between dark and white mode
+        if (!darkMode) {
+            // If not in dark mode, switch to dark mode
+            document.body.classList.add("dark-mode");       // Apply the dark mode class
+            document.body.classList.remove("white-mode");    // Remove the white mode class
+            darkMode = true;                                // Set darkMode to true
+        } else {
+            // If in dark mode, switch to white mode
+            document.body.classList.add("white-mode");       // Apply the white mode class
+            document.body.classList.remove("dark-mode");     // Remove the dark mode class
+            darkMode = false;                               // Set darkMode to false
+        }
+    }
+</script>
+</html>
