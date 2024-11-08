@@ -1,0 +1,39 @@
+
+<!--
+Create several divs with color names in textContent. Add JavaScript to add
+click event listeners to each element, and as each element is clicked, update the
+background color of the body to match the color name in the div.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise</title>
+</head>
+<style>
+    .red-background {
+        background-color: red;
+    }
+
+    .orange-background {
+        background-color: orange;
+    }
+
+
+</style>
+
+<body>
+    <div id="red">red</div>
+    <div id="orange">orange</div>
+</body>
+<script>
+    document.getElementById("red").addEventListener("click", function (){
+        document.body.classList.add("red-background");
+    });
+
+    document.getElementById("orange").addEventListener("click", function(){
+        document.body.classList.add("orange-background");
+    });
+
+
+</script>
+</html>
