@@ -1,0 +1,40 @@
+<!--
+- The window.onload event in JavaScript is used to execute code after the entire page and all its dependent resources (such as images, stylesheets, scripts, etc.) have fully loaded. This is helpful in situations where you need to make sure that every part of the page is available and ready for manipulation before your script runs.
+
+Key Uses of window.onload
+1. Ensuring Resources Are Loaded: It guarantees that images, stylesheets, and other external resources are completely loaded before executing your code, which is critical for cases where your code interacts with those resources. For example, if you want to set up an image gallery, window.onload ensures all images are available first.
+
+2. Manipulating the DOM Safely: If your script needs to modify or add elements to the DOM, window.onload ensures that the entire DOM tree is fully built, reducing the risk of encountering errors due to missing elements.
+
+3. Setting Up Event Listeners: window.onload is often used to set up event listeners for elements on the page. This ensures that all elements exist in the DOM before any interactions are applied.
+
+4. Initializations Dependent on the Page: Some scripts require the entire page to be present for proper initialization (e.g., animations, analytics tracking), and window.onload is a good place for these scripts to start.
+
+Example Usage
+In the following example, window.onload ensures that a button’s click event listener is set up only after the page has fully loaded:
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>using window.onload</title>
+</head>
+<body>
+    <!-- Button that will trigger an alert when clicked -->
+    <button id="myButton">Click me!</button>
+</body>
+<script>
+    // window.onload ensures this function runs only after the page has fully loaded
+    window.onload = function () {
+        // Selects the button element by its ID and assigns it to the variable 'button'
+        let button = document.getElementById("myButton");
+
+        // Adds a 'click' event listener to the button
+        // When the button is clicked, it will display an alert message
+        button.addEventListener("click", function() {
+            alert("Button clicked after page load!");
+        });
+    };
+</script>
+</html>

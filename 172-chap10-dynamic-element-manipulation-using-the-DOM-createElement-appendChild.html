@@ -1,0 +1,30 @@
+<!--
+- There is still an important one missing, the creation of new elements and adding
+them to the DOM.
+- This consists of two steps, first creating new elements and second
+adding them to the DOM.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>createElement and appendChild</title>
+</head>
+<body>
+    <!-- Container div where new elements will be added -->
+    <div id="container"></div>
+</body>
+<script>
+    // Selects the div with the ID "container" and stores it in the 'container' variable
+    let container = document.getElementById("container");
+
+    // Creates a new <p> element and stores it in the 'newElement' variable
+    let newElement = document.createElement("p");
+
+    // Sets the text content of the new <p> element
+    newElement.textContent = "This is a new paragraph.";
+
+    // Appends the new <p> element as a child of the 'container' div
+    container.appendChild(newElement);
+</script>
+</html>
