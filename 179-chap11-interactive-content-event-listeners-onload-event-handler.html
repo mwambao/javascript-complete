@@ -1,0 +1,26 @@
+
+<!--
+- The onload event gets fired after a certain element is loaded. This can be useful for a number of reasons. For example, if you want to select an element using getElementById, you'll have to be
+sure this element is loaded in the DOM already. This event is most commonly used on the window object, but it can be used on any element. When you use it on window, this event gets started when the window object is done loading.
+
+- You can also use the addEventListener() method on any element to handle any event. And it can also be used for the event that all the content in the DOM is loaded. There is a special built-in event for this: DOMContentLoaded(). This event can be used to handle the event of the DOM loading, which will get fired immediately after the DOM for the page has been constructed when the event is set.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>onload event handler</title>
+</head>
+<body>
+    <p>Hello welcome to my site!</p>
+</body>
+<script>
+   /* window.onload = function(){
+        //whatever needs to be happen after the page loads goeas here e.g.
+        alert("welcome to my site");
+    }*/
+
+    document.addEventListener("DOMContentLoaded", (e) => {
+        console.log(e);
+    })
+</script>
+</html>
