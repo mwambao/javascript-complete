@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mouse events handlers</title>
+</head>
+<body>
+    <!-- This div element will respond to various mouse events -->
+    <div id="divy" style="width:100px; height:100px; background-color: pink;">My sample text</div>
+</body>
+<script>
+    // This function runs once the window is fully loaded
+    window.onload = function doneNow() {
+        console.log("Hi");
+
+        // Adds an event listener for the "mousedown" event (when the mouse button is pressed down)
+        document.getElementById("divy").addEventListener("mousedown", function () {
+            // Calls changeColor to set the background color to green when clicked
+            changeColor(this, "green");
+        });
+
+        // Adds an event listener for the "mouseup" event (when the mouse button is released)
+        document.getElementById("divy").addEventListener("mouseup", function () {
+            // Changes the background color to yellow when the mouse is released
+            changeColor(this, "yellow");
+        });
+
+        // Adds an event listener for the "dblclick" event (when the element is double-clicked)
+        document.getElementById("divy").addEventListener("dblclick", function () {
+            // Changes the background color to black on double-click
+            changeColor(this, "black");
+        });
+
+        // Adds an event listener for the "mouseout" event (when the mouse leaves the element)
+        document.getElementById("divy").addEventListener("mouseout", function () {
+            // Changes the background color to blue when the mouse leaves the element
+            changeColor(this, "blue");
+        });
+
+        console.log("Hi2");
+    }
+
+    // Function to change the background color of a given element
+    function changeColor(el, color) {
+        // Sets the element's background color to the specified color
+        el.style.backgroundColor = color;
+    }
+</script>
+</html>
