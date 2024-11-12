@@ -12,13 +12,10 @@ Our aim is to change the background color of the element on the page as the vari
 4. Update the content of the element to say hello world.
 5. Using the style properties of the element, update the height and width, then
 add a default background color to it.
-6. Create a function to handle two arguments, the first being a color value as a
-string and the second being the event object of the trigger.
+6. Create a function to handle two arguments, the first being a color value as a string and the second being the event object of the trigger.
 7. In the function, output the color value to the console, and for the event,
 output the event type to the console.
-8. Add event listeners to the element: mousedown, mouseover, mouseout, and
-mouseup. For each of these events, send two arguments to the function that
-you created: a color value and the event object.
+8. Add event listeners to the element: mousedown, mouseover, mouseout, and mouseup. For each of these events, send two arguments to the function that you created: a color value and the event object.
 9. Run the code and try it in your browser.
 
 -->
@@ -29,21 +26,42 @@ you created: a color value and the event object.
     <title>EXERCISE</title>
 </head>
 <body>
+    <!-- Create a div element with the class 'sample-text' to interact with -->
     <div class="sample-text">My sample text</div>
-    
 </body>
 <script>
+    // Select the first element with the class name 'sample-text' and assign it to a variable
     let myElement = document.getElementsByClassName("sample-text")[0];
-    console.log(myElement);
+    console.log(myElement);  // Log the element to the console for verification
 
+    // Update the text content of the element
     myElement.textContent = "Hello world";
-    console.log(myElement);
+    console.log(myElement);  // Log the updated element to the console
 
-    myElement.style.height = "20px";
+    // Set the height, width, and initial background color of the element
+    myElement.style.height = "40px";
     myElement.style.width = "100px";
-    myElement.style.backgroundColor = "yellow";
+    myElement.style.backgroundColor = "red";
 
-    console.log(myElement);
+    console.log(myElement);  // Log the styled element to the console
 
+    // Define a function to change the background color and log the event type
+    function myFunction(ecolor, event) {
+        console.log(event.type);  // Log the event type (e.g., 'mousedown', 'mouseover')
+        myElement.style.backgroundColor = ecolor;  // Change background color based on passed color value
+    }
+
+    // Add event listeners to the element for various mouse events
+    // On 'mousedown', change the background color to green
+    myElement.addEventListener("mousedown", function (e) { myFunction("green", e); });
+
+    // On 'mouseover', change the background color to red
+    myElement.addEventListener("mouseover", function (e) { myFunction("red", e); });
+
+    // On 'mouseout', change the background color to yellow
+    myElement.addEventListener("mouseout", function (e) { myFunction("yellow", e); });
+
+    // On 'mouseup', change the background color to blue
+    myElement.addEventListener("mouseup", function (e) { myFunction("blue", e); });
 </script>
 </html>
