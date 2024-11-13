@@ -1,0 +1,30 @@
+<!--
+
+- Whenever an event gets fired, an event variable becomes available. It has many properties, and you can check it out by using this command in the function that gets fired for the event:
+console.dir(event)
+
+- This will show many properties. One of the most interesting properties for now is the target property. The target is the HTML element that fired the event. So, we can use it to get information from a web page.
+
+- In this case below, event.target is the button element. In the console, the button element and all its properties will be logged, including potential siblings and parents.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Target Property</title>
+</head>
+<body>
+    <!-- Button element that triggers the 'triggerSomething' function when clicked -->
+    <button type="button" onclick="triggerSomething()">Click</button>
+</body>
+<script>
+
+    // Function that will execute when the button is clicked
+    function triggerSomething() {
+        // Logs the event's target to the console, showing detailed information about the button element that was clicked
+        console.dir(event.target);
+    }
+
+</script>
+</html>
