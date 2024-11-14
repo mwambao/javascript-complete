@@ -1,0 +1,46 @@
+<!--
+Change the text in a div element on the page. This exercise will demonstrate how
+you can get the value from an input field and place it within a page element. It also covers tracking button clicks and details about the event target. You can use the following HTML document as a template, to which you can add JavaScript:
+
+Take the following steps:
+
+1. Using the above HTML as a template, add the JavaScript code, selecting each
+page element, including the div, the input field, and the button element.
+Assign these element objects to variables in your code.
+
+2. Create an empty array called log, which will be used to track and log all the
+events.
+3. Create a function that will capture the event object details in an object,
+adding it to the log array. Get the event target and create an object, adding it
+to the array that stores the input value at the time, the type of event, the class
+name of the target element, and the tag name of the target element.
+
+4. Within the logging function, get the value of the content within the input and
+assign that value to the textContent of the div.
+
+5. Clear the div content after the information is added to the log array.
+
+6. Add an event listener to both of the first two buttons that sends the event
+object to the tracking function created in the earlier steps.
+
+7. Attach an event listener to the third button that outputs the log content to the
+console
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EXERCISE - Event target</title>
+</head>
+<body>
+    <div class="output"></div>
+    <input type="text" name="message" placeholder="Your message">
+    <button class="btn1">Button 1</button>
+    <button class="btn2">Button 2</button>
+    <br>
+    <br>
+    <div>
+        <button class="btn3">Log</button>
+    </div>
+</body>
+</html>

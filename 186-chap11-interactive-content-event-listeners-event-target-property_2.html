@@ -4,13 +4,39 @@
     <title>event target property</title>
 </head>
 <body>
+  <!-- This is a div where the welcome message will be displayed -->
+  <div id="welcome">Hi there!</div>
+  
+  <!-- Form for user input: first name, last name, and a submit button -->
   <form>
+    <!-- Input field for the user's first name -->
     <input type="text" name="firstname" placeholder="First name"/>
+    
+    <!-- Input field for the user's last name -->
     <input type="text" name="lastname" placeholder="Last name"/>
-    <input type="button" onclick="" value="Submit"/>
+    
+    <!-- Button that triggers the sendInfo() function when clicked -->
+    <input type="button" onclick="sendInfo()" value="Submit"/>
   </form>
 </body>
+
 <script>
-    
+    // Function to handle the submit action when the button is clicked
+    function sendInfo() {
+        // 'event.target' refers to the element that triggered the event (in this case, the button).
+        // 'parentElement' accesses the parent form of the button to get input values.
+        let p = event.target.parentElement;
+        
+        // Log the event target for debugging (commented out here)
+        // console.dir(event.target);
+
+        // Construct a welcome message using the first and last name entered by the user
+        message("Welcome " + p.firstname.value + " " + p.lastname.value);
+    }
+
+    // Function to update the welcome message in the 'welcome' div
+    function message(m) {
+        document.getElementById("welcome").innerHTML = m;
+    }
 </script>
 </html>
