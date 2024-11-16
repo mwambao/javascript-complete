@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>onchange & onblur</title>
+</head>
+<body>
+    <!-- A div element used to display dynamic messages, starting with a default message -->
+    <div id="welcome">Hi there!</div>
+
+    <!-- A form containing input fields for user information -->
+    <form>
+        <!-- Input field for the user's first name 
+             - 'name' attribute is used to identify the input field in JavaScript
+             - 'placeholder' provides a hint text inside the input field
+             - 'onchange' event triggers the logEvent() function when the value changes -->
+        <input type="text" name="firstname" placeholder="First Name" onchange="logEvent()"/>
+
+        <!-- Input field for the user's last name 
+             - 'name' attribute identifies the input field in JavaScript
+             - 'placeholder' provides a hint text inside the input field
+             - 'onblur' event triggers the logEvent() function when the field loses focus -->
+        <input type="text" name="lastname" placeholder="Last Name" onblur="logEvent()"/>
+
+        <!-- Button to submit the form
+             - 'value' specifies the button's label
+             - 'onclick' event triggers the sendInfo() function when the button is clicked -->
+        <input type="button" value="Submit" onclick="sendInfo()"/>
+    </form>
+</body>
+
+<script>
+    // Function to handle 'onchange' and 'onblur' events from input fields
+    function logEvent() {
+        // Get the element that triggered the event
+        let p = event.target;
+
+        // Check which input field triggered the event and display an appropriate message
+        if (p.name == "firstname") {
+            message("First Name Changed to " + p.value); // Message for changes in the 'firstname' input
+        } else {
+            message("Last Name Changed to " + p.value); // Message for changes in the 'lastname' input
+        }
+    }
+
+    // Function to handle the 'onclick' event of the Submit button
+    function sendInfo() {
+        // Get the parent element of the button (which is the form element)
+        let p = event.target.parentElement;
+
+        // Create a welcome message using the values of the 'firstname' and 'lastname' fields
+        message("Welcome " + p.firstname.value + " " + p.lastname.value);
+    }
+
+    // Function to update the content of the 'welcome' div
+    function message(m) {
+        // Find the div with the ID 'welcome' and set its inner HTML to the provided message
+        document.getElementById("welcome").innerHTML = m;
+    }
+</script>
+
+</html>

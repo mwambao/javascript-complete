@@ -7,11 +7,9 @@ Take the following steps:
 page element, including the div, the input field, and the button element.
 Assign these element objects to variables in your code.
 
-2. Create an empty array called log, which will be used to track and log all the
-events.
-3. Create a function that will capture the event object details in an object,
-adding it to the log array. Get the event target and create an object, adding it
-to the array that stores the input value at the time, the type of event, the class
+2. Create an empty array called log, which will be used to track and log all the events.
+
+3. Create a function that will capture the event object details in an object, adding it to the log array. Get the event target and create an object, adding it to the array that stores the input value at the time, the type of event, the class
 name of the target element, and the tag name of the target element.
 
 4. Within the logging function, get the value of the content within the input and
@@ -34,7 +32,7 @@ console
 <body>
     <div class="output"></div>
     <input type="text" name="message" placeholder="Your message">
-    <button class="btn1">Button 1</button>
+    <button class="btn1" onclick="changeText()">Button 1</button>
     <button class="btn2">Button 2</button>
     <br>
     <br>
@@ -61,6 +59,17 @@ console
      let log = [];
      //console.log(log);
 
+     function changeText(){
+        p = event.target.parentElement;
+        // console.dir(p);
+     
+        console.log(m.innerHTML);
+        //log.push(p.innerHTML);
+        //p.innerHTML = "I love you"
+        //console.log(p.innerHTML);
+        //console.log(log);
+
+     }
 
 
 </script>
