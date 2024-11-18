@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form submission</title>
+</head>
+<body>
+    <!-- HTML form for user input -->
+    <form action="anotherpage.html" method="get"> 
+        <!-- Sets the destination of the form's data to "anotherpage.html" 
+             and specifies the HTTP GET method for data submission 
+             
+             anotherpage.html?name=test
+             -->
+        
+        <!-- Input field for entering a name -->
+        <input type="text" placeholder="name" name="name"> 
+        <!-- 'placeholder' provides a hint inside the field, 'name' defines the key for submitted data -->
+        
+        <!-- Submit button to send form data -->
+        <input type="submit" value="send">
+        <!-- 'value' defines the label shown on the button -->
+    </form>
+</body>
+</html>

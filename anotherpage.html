@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Another Page</title>
+</head>
+<body>
+    <script>
+        // Retrieve the query string from the URL (everything after the '?' in the URL)
+        let q = window.location.search;
+
+        // Parse the query string into a URLSearchParams object for easy access to parameters
+        let params = new URLSearchParams(q);
+
+        // Extract the value associated with the 'name' parameter
+        let name = params.get("name");
+
+        // Log the extracted value to the browser's console
+        console.log(name);
+    </script>
+</body>
+</html>
