@@ -1,9 +1,19 @@
 <!--
-Special events for drag and drop:
+- Special events for drag and drop:
     - draggable
     - ondrop
     - ondragover
     - ondragstart
+    
+- We start by specifying a variable in the script for the item that we want to hold when dragging. 
+When the ondragstart event gets triggered, we are going to store the element that is being dragged in the holderItem variable. 
+Normally, when you drag, dropping is not allowed by the design of HTML. In order to allow the drop, you'll have to prevent the default event that means the item you want to drop cannot be dropped. You can do this with:
+
+event.preventDefault();
+
+Usually, before you prevent the default behavior, you would do some checks to see whether the element that is being dropped can be accepted at that place. In the  example above, we check whether the class name of the element that it is being dropped to is box. If that's the case, we append holderItem as a child to the box.
+We have created a page that allows moving an HTML element from one box to another. If you try to release it anywhere else, the element goes back instead to its previous location.
+
 -->
 
 <!DOCTYPE html>
