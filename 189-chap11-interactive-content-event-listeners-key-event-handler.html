@@ -1,0 +1,52 @@
+<!--
+- onkeypress gets triggered, well, you may have guessed this, whenever a key gets pressed. Pressing means here when the button is pressed and released. 
+- If you want an event to happen as soon as the button is pressed (so before releasing), you can use the onkeydown event. 
+- If you want the event to happen on release, you can use the onkeyup event.
+
+* There are many things we can do with key events. For example, we can restrict what characters can be entered in an input box. Every time a key gets pressed, we can check the character and decide whether it gets to stay. We can get the key that triggered the event using:
+
+event.key;
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Key event handler</title>
+</head>
+<body>
+    <!-- A div to display messages dynamically -->
+    <div id="wrapper">Javascript is fun!</div>
+
+    <!-- Input field for the first number
+         - The 'onkeypress' event triggers the numCheck() function whenever a key is pressed
+         - 'name' attribute identifies the field for potential use in JavaScript -->
+    <input type="text" name="myNum1" onkeypress="numCheck()">
+
+    <!-- Input field for the second number
+         - The 'onkeypress' event triggers the numcheck2() function whenever a key is pressed -->
+    <input type="text" name="myNum2" onkeypress="numcheck2()">
+</body>
+
+<script>
+    // Function to check if the pressed key is a number
+    function numCheck() {
+        // Check if the 'event.key' is not NaN (a number)
+        message("Number: " + !isNaN(event.key)); // Display whether the key is a number
+        return !isNaN(event.key); // Return true if it's a number, false otherwise
+    }
+
+    // Function to check if the pressed key is NOT a number
+    function numcheck2() {
+        // Check if the 'event.key' is NaN (not a number)
+        message("Not a number: " + isNaN(event.key)); // Display whether the key is not a number
+        return isNaN(event.key); // Return true if it's not a number, false otherwise
+    }
+
+    // Function to update the message in the 'wrapper' div
+    function message(m) {
+        // Find the div with ID 'wrapper' and set its content to the given message
+        document.getElementById("wrapper").innerHTML = m;
+    }
+</script>
+</html>

@@ -1,0 +1,65 @@
+<!--
+Special events for drag and drop:
+    - draggable
+    - ondrop
+    - ondragover
+    - ondragstart
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Drag and drop elements</title>
+    <style>
+        /* Styling for the draggable and drop zones */
+        .box {
+            height: 200px; /* Height of the drop zones */
+            width: 200px;  /* Width of the drop zones */
+            padding: 20px; /* Inner padding for content */
+            margin: 0 50px; /* Spacing between the boxes */
+            display: inline-block; /* Ensures boxes are placed side by side */
+            border: 1px solid black; /* Border to define the box boundaries */
+        }
+
+        #dragme {
+            background-color: red; /* Background color of the draggable element */
+        }
+    </style>
+</head>
+<body>
+    <!-- Drop zone 1 -->
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">1
+        <!-- Draggable element -->
+        <div id="dragme" ondragstart="dStart()" draggable="true">Drag me please!</div>
+    </div>
+    
+    <!-- Drop zone 2 -->
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">2</div>
+</body>
+<script>
+    // A variable to hold the element being dragged
+    let holderItem;
+
+    /* Function to handle the dragstart event 
+       Stores the element being dragged */
+    function dStart(){
+        holderItem = event.target;
+    }
+
+    /* Function to handle the dragover event 
+       Prevents the default action to allow dropping */
+    function nDrop(){
+        event.preventDefault();
+    }
+
+    /* Function to handle the drop event 
+       Moves the dragged element to the target drop zone */
+    function dDrop(){
+        event.preventDefault(); // Prevents the default drop action
+        // Ensures the drop only happens in elements with the "box" class
+        if (event.target.className == "box") {
+            event.target.appendChild(holderItem); // Appends the dragged element to the drop zone
+        }
+    }
+</script>
+</html>
