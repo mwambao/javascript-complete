@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Annimating elemenets</title>
+</head>
+<body>
+    <style>
+        #myContainer {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: palegoldenrod;
+        }
+
+        #myAnnimation {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: red;
+        }
+
+    </style>
+    <div id="myContainer">
+        <div id="myAnnimation">My Annimation will go here</div>
+    </div>
+</body>
+<script>
+    let id = null;
+    function myMove(){
+        let elem = document.getElementById("myAnnimation");
+        let pos  = 0;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame(){
+            if (pos == 350) {
+                clearInterval(id);
+            } else {
+                pos++;
+                elem.style.top = pos + 
+            }
+        }
+    }
+</script>
+</html>
