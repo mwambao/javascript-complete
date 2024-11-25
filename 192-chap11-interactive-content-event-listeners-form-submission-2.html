@@ -1,0 +1,69 @@
+<!--
+We can also do some validation before sending form data...
+
+This form contains three input fields and one input button. The fields are for last
+name, first name, and age. When one of them is missing, the form will not submit,
+because the function will return false. A message will also be added to the div
+above the form, explaining what went wrong.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form submission</title>
+</head>
+<body>
+    <!-- A container to display validation messages -->
+    <div id="wrapper"></div>
+
+    <!-- Form with 'GET' method to submit data to anotherpage.html -->
+    <!-- Calls the 'valForm()' function for validation before submission -->
+    <form action="anotherpage.html" method="get" onsubmit="valForm()">
+        <!-- Input field for first name -->
+        <input type="text" id="firstName" name="firstName" placeholder="First Name"/>
+        <!-- Input field for second name -->
+        <input type="text" id="secondName" name="secondName" placeholder="Second Name"/>
+        <!-- Input field for age -->
+        <input type="text" id="age" name="age" placeholder="Age"/>
+        <!-- Submit button -->
+        <input type="submit" value="submit">
+    </form>
+</body>
+<script>
+    /**
+     * Validates the form inputs before submission.
+     * Ensures no field is left empty.
+     */
+    function valForm(){
+        // Accessing all child elements of the form triggering the event
+        let p = event.target.children;
+
+        // Check if the first name field is empty
+        if (p.firstName.value == ""){
+            message("Need a first name!!"); // Display error message
+            return false; // Prevent form submission
+        }
+
+        // Check if the second name field is empty
+        if (p.secondName.value == ""){
+            message("Need a last name!!"); // Display error message
+            return false; // Prevent form submission
+        }
+
+        // Check if the age field is empty
+        if (p.age.value == ""){
+            message("Need an age!!"); // Display error message
+            return false; // Prevent form submission
+        }
+
+        return false; // Prevent form submission for debugging (can be removed)
+    }
+
+    /**
+     * Displays the provided message in the 'wrapper' div.
+     * @param {string} m - The message to display
+     */
+    function message(m){
+        document.getElementById("wrapper").innerHTML = m; // Update the message container
+    }
+</script>
+</html>
