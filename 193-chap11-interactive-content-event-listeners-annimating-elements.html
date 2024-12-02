@@ -1,44 +1,48 @@
+<!--
+Lastly, we want to show you that you can animate using HTML, CSS, and JavaScript.
+This allows us to do even cooler things with our web page. For example, we can
+trigger an animation as an event. This can be used for many different purposes, for
+example, to illustrate an explanation, to draw the user's eyes to a certain location, or
+to play a game.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Annimating elemenets</title>
+    <title>Animating elements</title>
+    <style>
+        /* Styles for the animated box */
+        #box {
+            width: 100px; /* Width of the box */
+            height: 100px; /* Height of the box */
+            background-color: blue; /* Box color */
+            position: relative; /* Makes it possible to animate the 'left' property */
+        }
+    </style>
 </head>
 <body>
-    <style>
-        #myContainer {
-            width: 400px;
-            height: 400px;
-            position: relative;
-            background: palegoldenrod;
-        }
-
-        #myAnnimation {
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            background: red;
-        }
-
-    </style>
-    <div id="myContainer">
-        <div id="myAnnimation">My Annimation will go here</div>
-    </div>
+    <!-- A box that will be animated -->
+    <div id="box"></div>
 </body>
 <script>
-    let id = null;
-    function myMove(){
-        let elem = document.getElementById("myAnnimation");
-        let pos  = 0;
-        clearInterval(id);
-        id = setInterval(frame, 10);
-        function frame(){
-            if (pos == 350) {
-                clearInterval(id);
-            } else {
-                pos++;
-                elem.style.top = pos + 
-            }
+    // Select the box element by its ID
+    const box = document.getElementById('box');
+
+    // Variable to keep track of the current position of the box
+    let position = 0;
+
+    // Function to move the box
+    function moveBox() {
+        position += 5; // Increment the position by 5 pixels
+        box.style.left = position + 'px'; // Update the 'left' CSS property to move the box
+
+        // Check if the box has not yet reached the limit (700px)
+        if (position < 700) {
+            requestAnimationFrame(moveBox); // Call moveBox again for smooth animation
         }
     }
+
+    // Start the animation
+    moveBox();
 </script>
 </html>
