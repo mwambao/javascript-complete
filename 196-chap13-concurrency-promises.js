@@ -5,32 +5,20 @@ promises -> A promise is a special object that connects code that needs to produ
 robust way to wrap the (possibly pending) result of asynchronous work, mitigating the problem of deeply nested
 callbacks (known as "callback hell").
 
-Example
-const promise = new Promise((resolve, reject) => {
-    // Perform some work (possibly asynchronous)
-    // ...
-    if (/Work has successfully finished and produced "value"/) {
-        resolve(value);
-    } else {
-    // Something went wrong because of "reason"
-    // The reason is traditionally an Error object, although
-    // this is not required or enforced.
-    let reason = new Error(message);
-    reject(reason);
-    // Throwing an error also rejects the promise.
-    throw reason;
-    }
-});
+promise syntax:
 
-- The then and catch methods can be used to attach fulfillment and rejection callbacks:
+        let myPromise = new Promise(function(myResolve, myReject) {
+        // "Producing Code" (May take some time)
 
-    promise.then(value => {
-        // Work has completed successfully,
-        // promise has been fulfilled with "value"
-    }).catch(reason => {
-        // Something went wrong,
-        // promise has been rejected with "reason"
-    });
+        myResolve(); // when successful
+        myReject();  // when error
+        });
+
+        // "Consuming Code" (Must wait for a fulfilled Promise)
+        myPromise.then(
+        function(value) { * code if successful *},
+        function(error) { * code if some error * }
+        );
 
 - When we create a Promise, we give it a function. In the following example, we use a  convention that we have seen a lot; we are creating a function on the spot. So, inside the argument list we are defining the function, often done using arrow functions as well. This function needs two parameters, and these parameters are callbacks. We have called them resolve and reject here.
 - You can call these parameters anything you want, but resolve or res and reject or rej are most common
